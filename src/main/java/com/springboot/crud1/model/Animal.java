@@ -2,10 +2,10 @@ package com.springboot.crud1.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -15,7 +15,7 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "first_name")
+    @NotNull
     private String first_name;
     @Column (name = "last_name")
     private String last_name;
